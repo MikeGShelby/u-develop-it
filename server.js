@@ -87,16 +87,16 @@ app.post('/api/candidate', ({ body }, res) => {
 
     // ES5 function, not arrow function, to use `this`
     db.run(sql, params, function(err, result) {
-    if (err) {
-    res.status(400).json({ error: err.message });
-    return;
-    }
+        if (err) {
+            res.status(400).json({ error: err.message });
+            return;
+        }
 
-    res.json({
-    message: 'success',
-    data: body,
-    id: this.lastID
-    });
+        res.json({
+            message: 'success',
+            data: body,
+            id: this.lastID
+        });
     });
 });
 
