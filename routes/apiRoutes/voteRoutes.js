@@ -54,6 +54,4 @@ router.get('/votes', (req, res) => {
     });
 });
 
-
-
 module.exports = router;
